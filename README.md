@@ -51,6 +51,9 @@
 
 5.    Arduino库
 为了让代码能够控制小车和使用ESP8266的Wi-Fi功能，你需要使用以下Arduino库：
-* ESPAsyncTCP.h >库是ESPAsyncTCP.h，它是ESP8266上的异步TCP库，提供了一组函数用于处理TCP连接、发送和接收数据等操作。该库通常与ESPAsyncWebServer.h一起使用，以创建异步Web服务器。
-* ESP8266WiFi.h >ESP8266WiFI.h这个库是用于ESP8266 Wi-Fi模块的Arduino库，它允许你在ESP8266上创建一个Wi-Fi访问点或连接到现有的Wi-Fi网络。该库提供了一组函数，可用于设置Wi-Fi模式、连接到Wi-Fi网络、获取IP地址等操作。
-* ESPAsyncWebServer.h >ESPAsyncWebServer.h这个库是一个基于ESPAsyncTCP库的异步Web服务器库，它允许你在ESP8266上创建一个Web服务器并处理HTTP请求。该库提供了一组函数，用于创建Web服务器、处理HTTP请求、发送HTTP响应等操作。
+* ESPAsyncTCP.h 
+> 库是ESPAsyncTCP.h，它是ESP8266上的异步TCP库，提供了一组函数用于处理TCP连接、发送和接收数据等操作。该库通常与ESPAsyncWebServer.h一起使用，以创建异步Web服务器。
+* ESP8266WiFi.h 
+> ESP8266WiFI.h这个库是用于ESP8266 Wi-Fi模块的Arduino库，它允许你在ESP8266上创建一个Wi-Fi访问点或连接到现有的Wi-Fi网络。该库提供了一组函数，可用于设置Wi-Fi模式、连接到Wi-Fi网络、获取IP地址等操作。
+* ESPAsyncWebServer.h
+> ESPAsyncWebServer.h这个库是一个基于ESPAsyncTCP库的异步Web服务器库，它允许你在ESP8266上创建一个Web服务器并处理HTTP请求。该库提供了一组函数，用于创建Web服务器、处理HTTP请求、发送HTTP响应等操作。
