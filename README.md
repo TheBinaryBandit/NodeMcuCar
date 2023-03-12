@@ -68,3 +68,10 @@
 4.在“libraries”文件夹中创建一个新的文件夹，命名为“ESPAsyncWebServer”。  
 5.将解压后的ESPAsyncWebServer源代码中的所有文件和文件夹复制到“ESPAsyncWebServer”文件夹中。  
 6.重启Arduino IDE，你就可以在“文件”菜单中选择“示例”选项，找到ESPAsyncWebServer库的示例代码进行学习和实验了。  
+
+----
+
+**连接线引脚图（L298N和ESP8266）**  
+  
+ |:-----ESP8266--------:||:-------L298N------:|
+
