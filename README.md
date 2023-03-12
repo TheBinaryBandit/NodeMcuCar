@@ -71,7 +71,7 @@
 
 ----
 
-### **连接线引脚图（L298N和ESP8266）**  
+### **连接线引脚图（ESP8266和L298N驱动）**  
   
 
 | ESP8266      | L298N驱动     | 
@@ -83,5 +83,10 @@
 | D7     |   IN2   |  
 | D8     |   IN1   |  
   
-   
+请将买来的ESP8266开发板插在MB-102面包板上,请看下图  
+
+![面包板使用](https://srituhobby.com/ezoimgfmt/i0.wp.com/srituhobby.com/wp-content/uploads/2021/03/8-5.jpg?w=1024&ssl=1&ezimgfmt=ng:webp/ngcb1)  
+  
+  
+  
    ----
