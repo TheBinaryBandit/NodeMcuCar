@@ -58,16 +58,16 @@
 * ESPAsyncWebServer.h
 > ESPAsyncWebServer.h这个库是一个基于ESPAsyncTCP库的异步Web服务器库，它允许你在ESP8266上创建一个Web服务器并处理HTTP请求。该库提供了一组函数，用于创建Web服务器、处理HTTP请求、发送HTTP响应等操作。
 
-安装这3给库的方法有2种。
-第1种方法:
-1.打开Arduino IDE，进入“工具”菜单，选择“管理库”选项。
-2.在弹出的“库管理器”对话框中，搜索需要安装的库。输入关键字“ESPAsyncTCP”或“ESPAsyncWebServer”，然后点击搜索按钮。
-3.在搜索结果中找到对应的库，并点击“安装”按钮。
-4.安装完成后，你就可以在Arduino IDE的“文件”菜单中选择“示例”选项，找到对应的示例代码进行学习和实验了。
-第2种方法:
-1.去Google直接搜索ESPAsyncTCP和ESPAsyncWebServer下载zip文件包。下载ESPAsyncWebServer的源代码，并将它解压到一个临时文件夹中。
-2.打开Arduino IDE，进入“文件”菜单，选择“首选项”选项，找到“Sketchbook位置”选项。
-3.在“Sketchbook位置”选项中，找到“libraries”文件夹，并进入该文件夹。
-4.在“libraries”文件夹中创建一个新的文件夹，命名为“ESPAsyncWebServer”。
-5.将解压后的ESPAsyncWebServer源代码中的所有文件和文件夹复制到“ESPAsyncWebServer”文件夹中。
-6.重启Arduino IDE，你就可以在“文件”菜单中选择“示例”选项，找到ESPAsyncWebServer库的示例代码进行学习和实验了。
+安装这3个库的方法有2种。  
+第1种方法:  
+1.打开Arduino IDE，进入“工具”菜单，选择“管理库”选项。  
+2.在弹出的“库管理器”对话框中，搜索需要安装的库。输入关键字“ESPAsyncTCP”或“ESPAsyncWebServer”，然后点击搜索按钮。  
+3.在搜索结果中找到对应的库，并点击“安装”按钮。  
+4.安装完成后，你就可以在Arduino IDE的“文件”菜单中选择“示例”选项，找到对应的示例代码进行学习和实验了。  
+第2种方法:  
+1.去Google直接搜索ESPAsyncTCP和ESPAsyncWebServer下载zip文件包。下载ESPAsyncWebServer的源代码，并将它解压到一个临时文件夹中。  
+2.打开Arduino IDE，进入“文件”菜单，选择“首选项”选项，找到“Sketchbook位置”选项。  
+3.在“Sketchbook位置”选项中，找到“libraries”文件夹，并进入该文件夹。  
+4.在“libraries”文件夹中创建一个新的文件夹，命名为“ESPAsyncWebServer”。  
+5.将解压后的ESPAsyncWebServer源代码中的所有文件和文件夹复制到“ESPAsyncWebServer”文件夹中。  
+6.重启Arduino IDE，你就可以在“文件”菜单中选择“示例”选项，找到ESPAsyncWebServer库的示例代码进行学习和实验了。  
