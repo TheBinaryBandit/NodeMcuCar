@@ -10,7 +10,7 @@
 </br>5. 9v电池 x 1
 > 以上这些材料，淘宝或者拼多多购买就行了。
 
-
+------------
 ## **项目环境搭建以及Arduino库:**
 </br>1.下载和安装Arduino IDE
 >你可以从官方网站下载Arduino IDE，然后按照指示安装它。官方网站：https://www.arduino.cc/en/software
