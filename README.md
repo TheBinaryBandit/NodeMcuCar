@@ -13,7 +13,8 @@
 ------------
 ## **项目环境搭建以及Arduino库:**
 1. 下载和安装Arduino IDE
->你可以从官方网站下载Arduino IDE，然后按照指示安装它。**官方网站：https://www.arduino.cc/en/software**
+你可以从官方网站下载Arduino IDE，然后按照指示安装它。
+</br>**官方网站：https://www.arduino.cc/en/software**
 
 2. 安装ESP8266支持
 打开Arduino IDE，然后从菜单中选择“文件” -> “首选项”。在打开的首选项对话框中输入以下网址，然后单击“OK”：
