@@ -16,6 +16,6 @@
 >你可以从官方网站下载Arduino IDE，然后按照指示安装它。官方网站：https://www.arduino.cc/en/software
 
 </br>2.安装ESP8266支持
->打开Arduino IDE，然后从菜单中选择“文件” -> “首选项”。在打开的首选项对话框中输入以下网址，然后单击“OK”：
->http://arduino.esp8266.com/stable/package_esp8266com_index.json
->接下来，从菜单中选择“工具” -> “开发板” -> “开发板管理器”，然后在搜索框中输入“ESP8266”。单击搜索结果中的“esp8266 by ESP8266 Community”以安装支持。
+</br> >打开Arduino IDE，然后从菜单中选择“文件” -> “首选项”。在打开的首选项对话框中输入以下网址，然后单击“OK”：
+</br> >http://arduino.esp8266.com/stable/package_esp8266com_index.json
+</br> >接下来，从菜单中选择“工具” -> “开发板” -> “开发板管理器”，然后在搜索框中输入“ESP8266”。单击搜索结果中的“esp8266 by ESP8266 Community”以安装支持。
