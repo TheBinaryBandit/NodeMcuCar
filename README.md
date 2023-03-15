@@ -106,35 +106,41 @@ __提示：__ ESP8266的D5口需要插在L298N的ENA口（在IN1口旁边，需�
 #define IN_3 2      // L298N: IN3 -> ESP8266:D4  
 #define IN_4 0      // L298N: IN4 -> ESP8266:D3  
 ``` 
->// 使用宏定义，定义ESP8266引脚(D8,D7,D6,D5,D4,D3)，它们用于控制小车的电机和方向。   
+> 使用宏定义，定义ESP8266引脚(D8,D7,D6,D5,D4,D3)，它们用于控制小车的电机和方向。   
+  
+  
    
 ---
+   
   
-  // 定义WiFi的用户名和密码，PARAM_dir参数，请注意ssid的赋值是填写你自己家的WIFI名字，例如WiFi名字为：我是帅哥。	:laughing:那么ssid就是填写我是帅哥，然后password是WiFi密码。
 ```C
 const char *ssid = "";
 const char *password  = "";
 const char *PARAM_dir = "dir";
 ```
+>定义WiFi的用户名和密码，PARAM_dir参数，请注意ssid的赋值是填写你自己家的WIFI名字，例如WiFi名字为：我是帅哥。	:laughing:那么ssid就是填写我是帅哥，然后password是WiFi密码。
+  
+  
   
 ---
   
-这行代码定义了一个名为 __index_html__ 的常量字符数组，使用了C++11引入的原始字面量（Raw String Literal）语法，用于在代码中直接定义多行字符串。  
+   
+```C
+const char index_html[] PROGMEM = R"rawliteral()rawliteral()";  
+```
+    
+>这行代码定义了一个名为 __index_html__ 的常量字符数组，使用了C++11引入的原始字面量（Raw String Literal）语法，用于在代码中直接定义多行字符串。  
 __const__ 关键字表示 __index_html__ 是一个常量，不能在程序中被修改，只能被读取。  
 char表示这是一个字符数组。  
 __PROGMEM__ 是一个宏定义，将数据存储在程序存储器中（也称为“程序空间”），而不是RAM中，可以节省RAM的使用，特别适用于内存有限的嵌入式系统。    
 __R"rawliteral()__ 是一个C++11引入的原始字面量语法，用于直接定义多行字符串，其中 __rawliteral__ 可以替代为任何非转义字符，如 __R"str()__ 或者 __R"file()__ 等。  
 所以这行代码定义了一个空字符串 __indexhml__ 并将其存储在程序存储器中，常用于嵌入式系统中的Web服务器等场景。  
   
-```C
-const char index_html[] PROGMEM = R"rawliteral()rawliteral()";  
-```
+  
   
 ---
+    
   
-开启串口通信，波特率为115200，以便后面可以通过串口打印调试信息。初始化一些针脚模式，将ENA、ENB、IN_1、IN_2、IN_3、IN_4这几个针脚设置为输出模式，以便控制电机的运动方向和速度。  
-其中，ENA和ENB是控制电机转速的PWM针脚，IN_1、IN_2、IN_3、IN_4是控制电机方向的针脚。通过设置这些针脚的输出电平，可以控制电机的转速和方向，从而控制小车的运动。  
-
 ```C
 void setup()
 {
@@ -148,10 +154,13 @@ void setup()
  pinMode(IN_4, OUTPUT); 
 ```
   
+>开启串口通信，波特率为115200，以便后面可以通过串口打印调试信息。初始化一些针脚模式，将ENA、ENB、IN_1、IN_2、IN_3、IN_4这几个针脚设置为输出模式，以便控制电机的运动方向和速度。  
+其中，ENA和ENB是控制电机转速的PWM针脚，IN_1、IN_2、IN_3、IN_4是控制电机方向的针脚。通过设置这些针脚的输出电平，可以控制电机的转速和方向，从而控制小车的运动。  
+  
 ---
   
-  这段代码是用于连接WiFi并获取本地IP地址的。首先使用WiFi.begin(ssid, password);连接到指定的WiFi网络，其中ssid和password分别是WiFi的名称和密码。然后使用while循环和WiFi.status()函数等待连接成功，当WiFi状态为WL_CONNECTED时退出循环，此时表示已经连接成功。接着使用Serial.println(WiFi.localIP());打印出ESP8266模块所连接的WiFi网络分配的本地IP地址，方便用户访问和控制。  
   
+    
 ```C
  WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -161,4 +170,5 @@ void setup()
   // 打印出本地IP地址便于访问
   Serial.println(WiFi.localIP());
 ```
-
+  
+>这段代码是用于连接WiFi并获取本地IP地址的。首先使用WiFi.begin(ssid, password);连接到指定的WiFi网络，其中ssid和password分别是WiFi的名称和密码。然后使用while循环和WiFi.status()函数等待连接成功，当WiFi状态为WL_CONNECTED时退出循环，此时表示已经连接成功。接着使用Serial.println(WiFi.localIP());打印出ESP8266模块所连接的WiFi网络分配的本地IP地址，方便用户访问和控制。
