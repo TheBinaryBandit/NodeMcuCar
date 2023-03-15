@@ -13,7 +13,7 @@
 ------------
 **项目环境搭建以及Arduino库:**
 1. 下载和安装Arduino IDE  
-你可以从官方网站下载Arduino IDE，然后按照指示安装它。  
+你可以从官方网站下载Arduino IDE，然后按照指示安装它。请注意这里我的版本是__1.8.19 Arduino IDE__，若下载最新版本的Arduino IDE可能存在开发板兼容问题。
 </br>**官方网站：https://www.arduino.cc/en/software**  
 
 ---
@@ -88,11 +88,21 @@
 ![面包板使用](https://srituhobby.com/ezoimgfmt/i0.wp.com/srituhobby.com/wp-content/uploads/2021/03/8-5.jpg?w=1024&ssl=1&ezimgfmt=ng:webp/ngcb1)  
   
 将公杜邦线(尖头)插在ESP8266开发板的D3口，母线插在L298N的IN4口。以此类推，根据连接线引脚图对接线路。  
-提示：ESP8266的D5口需要插在L298N的ENA口（在IN1口旁边，需要把帽盖用钳子拔开），ESP8266的D6口需要插在L298N的ENB口（在IN4的旁边，需要把帽盖用钳子拔开）  
+__提示：__ ESP8266的D5口需要插在L298N的ENA口（在IN1口旁边，需要把帽盖用钳子拔开），ESP8266的D6口需要插在L298N的ENB口（在IN4的旁边，需要把帽盖用钳子拔开）  
   
+
+   ----  
+
   
-   ----
-  
-  
-## **代码讲解：**
-  
+## **部分代码讲解：**
+
+![ESP8266引脚图](https://upload-images.jianshu.io/upload_images/1396375-621620a4b07dbc3e.png?imageMogr2/auto-orient/strip|imageView2/2/w/791/format/webp)    
+```  
+// 使用宏定义，定义ESP8266引脚(D8,D7,D6,D5,D4,D3)，它们用于控制小车的电机和方向。  
+#define ENA 14      // L298N: ENA -> ESP8266:D5  
+#define ENB 12      // L298N :ENB -> ESP8266:D6  
+#define IN_1 15     // L298N: IN1 -> ESP8266:D8  
+#define IN_2 13     // L298N: IN2 -> ESP8266:D7  
+#define IN_3 2      // L298N: IN3 -> ESP8266:D4  
+#define IN_4 0      // L298N: IN4 -> ESP8266:D3  
+```  
