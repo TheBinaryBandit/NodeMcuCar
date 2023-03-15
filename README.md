@@ -97,7 +97,8 @@ __提示：__ ESP8266的D5口需要插在L298N的ENA口（在IN1口旁边，需�
 ## **部分代码讲解：**
 
 ![ESP8266引脚图](https://upload-images.jianshu.io/upload_images/1396375-621620a4b07dbc3e.png?imageMogr2/auto-orient/strip|imageView2/2/w/791/format/webp)    
-```  
+  
+```C
 // 使用宏定义，定义ESP8266引脚(D8,D7,D6,D5,D4,D3)，它们用于控制小车的电机和方向。  
 #define ENA 14      // L298N: ENA -> ESP8266:D5  
 #define ENB 12      // L298N :ENB -> ESP8266:D6  
