@@ -98,20 +98,20 @@ __提示：__ ESP8266的D5口需要插在L298N的ENA口（在IN1口旁边，需�
 
 ![ESP8266引脚图](https://upload-images.jianshu.io/upload_images/1396375-621620a4b07dbc3e.png?imageMogr2/auto-orient/strip|imageView2/2/w/791/format/webp)    
   
-```C
-// 使用宏定义，定义ESP8266引脚(D8,D7,D6,D5,D4,D3)，它们用于控制小车的电机和方向。  
+```C 
 #define ENA 14      // L298N: ENA -> ESP8266:D5  
 #define ENB 12      // L298N :ENB -> ESP8266:D6  
 #define IN_1 15     // L298N: IN1 -> ESP8266:D8  
 #define IN_2 13     // L298N: IN2 -> ESP8266:D7  
 #define IN_3 2      // L298N: IN3 -> ESP8266:D4  
 #define IN_4 0      // L298N: IN4 -> ESP8266:D3  
-```    
-  
+``` 
+>// 使用宏定义，定义ESP8266引脚(D8,D7,D6,D5,D4,D3)，它们用于控制小车的电机和方向。   
+   
 ---
   
+  // 定义WiFi的用户名和密码，PARAM_dir参数，请注意ssid的赋值是填写你自己家的WIFI名字，例如WiFi名字为：我是帅哥。	:laughing:那么ssid就是填写我是帅哥，然后password是WiFi密码。
 ```C
-// 定义WiFi的用户名和密码，PARAM_dir参数，请注意ssid的赋值是填写你自己家的WIFI名字，例如WiFi名字为：我是帅哥。	:laughing:那么ssid就是填写我是帅哥，然后password是WiFi密码。
 const char *ssid = "";
 const char *password  = "";
 const char *PARAM_dir = "dir";
