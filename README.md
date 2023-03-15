@@ -14,6 +14,19 @@
 5.  11.1V 电池 x 1
 > 以上这些材料，淘宝或者拼多多购买就行了。
 
+
+  --- 
+   
+   
+   
+**Web页面：**
+  
+![webpage](https://github.com/TheBinaryBandit/NodeMcuCar/blob/main/Web%20image.png)
+  
+  
+   
+   
+
 ------------
 **项目环境搭建以及Arduino库:**
 1. 下载和安装Arduino IDE  
