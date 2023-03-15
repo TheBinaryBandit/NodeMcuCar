@@ -171,4 +171,56 @@ void setup()
   Serial.println(WiFi.localIP());
 ```
   
->这段代码是用于连接WiFi并获取本地IP地址的。首先使用WiFi.begin(ssid, password);连接到指定的WiFi网络，其中ssid和password分别是WiFi的名称和密码。然后使用while循环和WiFi.status()函数等待连接成功，当WiFi状态为WL_CONNECTED时退出循环，此时表示已经连接成功。接着使用Serial.println(WiFi.localIP());打印出ESP8266模块所连接的WiFi网络分配的本地IP地址，方便用户访问和控制。
+>这段代码是用于连接WiFi并获取本地IP地址的。首先使用WiFi.begin(ssid, password);连接到指定的WiFi网络，其中ssid和password分别是WiFi的名称和密码。然后使用while循环和WiFi.status()函数等待连接成功，当WiFi状态为WL_CONNECTED时退出循环，此时表示已经连接成功。接着使用Serial.println(WiFi.localIP());打印出ESP8266模块所连接的WiFi网络分配的本地IP地址，方便用户访问和控制。  
+    
+---
+  
+  
+```C  
+ server.on("/", HTTP_GET, [](AsyncWebServerRequest *request) {
+   request->send_P(200, "text/html", index_html);
+   Serial.print("get success!");
+  });
+```C
+  
+>设置服务器路由，使其能够响应对根路径/的HTTP GET请求，并返回HTML页面。  
+  
+      
+---
+  
+  
+```C
+server.on("/direction", HTTP_GET, [](AsyncWebServerRequest *request) {
+  int speedCar =0;
+  String dir = ""; 
+```
+  
+>在服务器对象上设置了一个名为“direction”的HTTP GET路由，该路由通过request对象的getParam函数来获取speedCar和dir参数的值，分别表示小车的速度和方向。  
+  
+        
+---
+  
+```C
+  if(request->hasParam("speedCar")){
+    speedCar = request->getParam("speedCar")->value().toInt();
+    Serial.print("get speedCar: ");Serial.println(speedCar);
+    }
+       if(request->hasParam("dir")){
+       dir = request->getParam("dir")->value().c_str();
+       Serial.print("get dir: ");Serial.println(dir);
+       }
+    
+    handleDirection(dir,speedCar);
+
+     request->send(200, "text/html", "Received direction parameter: " + dir + "Recive Car Speed: " + speedCar);
+   
+  });
+  server.begin();
+  }
+  ```
+   
+ >如果获取成功，则分别将speedCar和dir打印到串口中，并通过ENA、ENB、IN_1、IN_2、IN_3和IN_4等引脚控制小车的运动。  
+   
+   
+     
+     
